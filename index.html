@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Samsung Galaxy S26 — IGNOU BSc Psychology Lock Screen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --glass-bg: rgba(24, 28, 22, 0.58);
+      --glass-border: rgba(255, 255, 255, 0.14);
+      --warm-cream: #F5F3EE;
+      --sage-muted: #C8C4B8;
+      --sage-accent: #A3B18A;
+      --amber-accent: #DDA15E;
+      --forest-deep: #141913;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100dvh;
+      max-height: 100dvh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #10140f;
+      color: var(--warm-cream);
+    /* Warm sunlit leafy window & wooden study room photographic atmosphere inside the smartphone screen */
+    .phone-shell {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(18, 23, 17, 0.44) 0%,
+          rgba(22, 27, 20, 0.40) 36%,
+          rgba(17, 21, 16, 0.72) 78%,
+          rgba(12, 15, 11, 0.90) 100%
+        ),
+        url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1600&q=85');
+      background-size: cover;
+      background-position: center 32%;
+    }
+
+    .phone-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 14%, rgba(221, 161, 94, 0.16) 0%, transparent 46%),
+        radial-gradient(circle at 82% 62%, rgba(163, 177, 138, 0.15) 0%, transparent 50%);
+    }
+
+    .phone-shell > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Frosted glass lock screen widget styling */
+    .frosted-widget {
+      background: var(--glass-bg);
+      backdrop-filter: blur(14px) saturate(130%);
+      -webkit-backdrop-filter: blur(14px) saturate(130%);
+      border: 1px solid var(--glass-border);
+      box-shadow:
+        0 8px 24px -6px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 0 rgba(255, 250, 240, 0.08);
+    }
+
+    .frosted-pill {
+      background: rgba(245, 243, 238, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(245, 243, 238, 0.14);
+    }
+
+    /* Fluid clamp() typography so every block fits inside 100dvh on any device */
+    .lock-clock {
+      font-size: clamp(2.4rem, 6.2vh, 3.65rem);
+      font-weight: 300;
+      line-height: 0.94;
+      letter-spacing: -0.035em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.48);
+    }
+
+    .lock-clock .clock-hr {
+      font-weight: 600;
+    }
+
+    .lock-clock .clock-min {
+      font-weight: 200;
+    }
+
+    .milestone-row-text {
+      font-size: clamp(0.66rem, 1.35vh, 0.75rem);
+      line-height: 1.22;
+    }
+
+    .serif-accent {
+      font-family: 'Newsreader', Georgia, serif;
+    }
+
+    /* Clean Wallpaper Mode hides interactive chrome for clean lock screen screenshots */
+    body.wallpaper-mode .hide-in-wallpaper {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    body.wallpaper-mode .wallpaper-exit-pill {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+
+    /* Samsung Galaxy S26 Armor Aluminum chassis & ultra-thin symmetric bezels on desktop */
+    @media (min-width: 640px) {
+      .s26-chassis {
+        position: relative;
+        height: min(96dvh, 875px);
+        max-height: min(96dvh, 875px);
+        border-radius: 2.35rem;
+        padding: 4px;
+        background: linear-gradient(145deg, #6e726b 0%, #3d403b 35%, #2a2c29 70%, #5c6059 100%);
+        box-shadow:
+          0 28px 65px -12px rgba(0, 0, 0, 0.85),
+          0 0 0 1px rgba(255, 255, 255, 0.14);
+      }
+
+      /* Right-edge Armor Aluminum Volume Rocker & Side Power Key */
+      .s26-chassis::before {
+        content: '';
+        position: absolute;
+        right: -3.5px;
+        top: 19%;
+        width: 3px;
+        height: 68px;
+        border-radius: 0 3px 3px 0;
+        background: linear-gradient(180deg, #6b6f68, #3b3e39, #5f635c);
+      }
+
+      .s26-chassis::after {
+        content: '';
+        position: absolute;
+        right: -3.5px;
+        top: 31%;
+        width: 3px;
+        height: 38px;
+        border-radius: 0 3px 3px 0;
+        background: linear-gradient(180deg, #6b6f68, #3b3e39, #5f635c);
+      }
+
+      .phone-shell {
+        height: 100%;
+        max-height: 100%;
+        border-radius: 2.1rem;
+        border: 2.5px solid #090a09;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .s26-chassis {
+        width: 100%;
+        height: 100dvh;
+        max-height: 100dvh;
+      }
+
+      .phone-shell {
+        height: 100dvh;
+        max-height: 100dvh;
+      }
+    }
+
+    /* Ultrasonic Fingerprint Ripple Animation */
+    @keyframes ultrasonicPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(221, 161, 94, 0.55);
+      }
+      70% {
+        box-shadow: 0 0 0 12px rgba(221, 161, 94, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(221, 161, 94, 0);
+      }
+    }
+
+    .fingerprint-ripple {
+      animation: ultrasonicPulse 0.65s ease-out;
+    }
+
+    /* Samsung One UI 8.5 Now Bar Pill */
+    .oneui-now-bar {
+      background: linear-gradient(135deg, rgba(32, 38, 30, 0.78) 0%, rgba(20, 24, 19, 0.86) 100%);
+      backdrop-filter: blur(18px) saturate(145%);
+      -webkit-backdrop-filter: blur(18px) saturate(145%);
+      border: 1px solid rgba(245, 243, 238, 0.18);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-200/20 selection:text-amber-100">
+
+  <!-- Floating Exit Pill when in Clean Wallpaper Mode -->
+  <button
+    id="exitWallpaperBtn"
+    onclick="toggleWallpaperMode(false)"
+    class="wallpaper-exit-pill opacity-0 pointer-events-none fixed top-3 right-3 z-50 px-3 py-1.5 rounded-full frosted-widget text-[11px] font-medium text-[#F5F3EE] flex items-center gap-1.5 shadow-lg transition-opacity duration-300"
+  >
+    <svg class="w-3 h-3 text-[#DDA15E]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    Exit Clean View
+  </button>
+
+  <!-- Centered Viewport Wrapper (Zero Scroll) -->
+  <div class="relative z-10 h-[100dvh] max-h-[100dvh] w-full flex items-center justify-center sm:p-2 overflow-hidden">
+
+    <!-- Samsung Galaxy S26 Armor Aluminum Outer Chassis -->
+    <div class="s26-chassis w-full max-w-[416px]">
+
+      <!-- Lock Screen Inner Display -->
+      <main class="phone-shell relative w-full flex flex-col justify-between px-3.5 pt-2 pb-1.5 sm:px-4 sm:pt-2.5 sm:pb-2 select-none">
+
+        <!-- 1. SAMSUNG ONE UI 8.5 STATUS BAR + INFINITY-O PUNCH HOLE + LOCK CLOCK -->
+        <header class="shrink-0">
+          <!-- One UI Status Bar split around centered Infinity-O Punch-Hole Camera -->
+          <div class="grid grid-cols-3 items-center text-[10px] font-medium tracking-tight text-[#F5F3EE]/90 px-0.5">
+            <!-- Left: Carrier & Mini Notification Icons -->
+            <div class="flex items-center gap-1.5 truncate">
+              <span class="font-semibold">Jio 5G</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#DDA15E]" title="IGNOU Portal Alert"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#A3B18A]" title="Study Reminder"></span>
+            </div>
+
+            <!-- Center: Galaxy S26 Infinity-O Punch-Hole Camera Cutout -->
+            <div class="flex justify-center">
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-[#060706] border border-white/15 shadow-inner flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <div class="w-1.5 h-1.5 rounded-full bg-[#15222e]/90"></div>
+              </div>
+            </div>
+
+            <!-- Right: One UI Wi-Fi 7, 5G Signal Bars & One UI Pill Battery (88%) -->
+            <div class="flex items-center justify-end gap-1.5 text-[#F5F3EE]/95">
+              <!-- Wi-Fi 7 Icon -->
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Wi-Fi 7">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              <!-- 5G Signal Bars -->
+              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-label="Cellular signal">
+                <rect x="2" y="16" width="3" height="5" rx="0.8" />
+                <rect x="7" y="12" width="3" height="9" rx="0.8" />
+                <rect x="12" y="8" width="3" height="13" rx="0.8" />
+                <rect x="17" y="4" width="3" height="17" rx="0.8" />
+              </svg>
+              <!-- Signature Samsung One UI Pill Battery Indicator (88%) -->
+              <div class="inline-flex items-center justify-center px-1.5 py-[1px] rounded-full bg-[#F5F3EE]/90 text-[#111510] text-[9px] font-bold leading-none tracking-tighter" aria-label="Battery 88 percent">
+                88
+              </div>
+            </div>
+          </div>
+
+          <!-- One UI Lock Icon + 4:00 AM Alarm Badge + Samsung Lock Clock -->
+          <div class="flex flex-col items-center text-center mt-0.5">
+            <div class="flex items-center gap-2 text-[#F5F3EE]/80 mb-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span class="inline-flex items-center gap-1 px-1.5 py-[1px] rounded-full bg-white/10 border border-white/10 text-[9px] font-medium text-[#DDA15E]">
+                <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="13" r="8" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4l2.5 1.5" />
+                </svg>
+                4:00 AM
+              </span>
+            </div>
+
+            <!-- One UI Bold-Hour / Light-Minute Lock Screen Clock -->
+            <div id="liveClock" class="lock-clock text-[#F5F3EE]">
+              <span class="clock-hr">10</span><span class="opacity-80">:</span><span class="clock-min">46</span>
+              <span class="text-[12px] font-normal tracking-wide text-[#C8C4B8] align-top ml-0.5">AM</span>
+            </div>
+
+            <div id="liveDateLine" class="mt-0.5 text-[10px] font-normal tracking-tight text-[#F5F3EE]/90">
+              Tue, Nov 24 • <span class="text-[#DDA15E] font-medium">Assignments: T-6d</span> • <span class="text-[#A3B18A] font-medium">Exams: T-11d</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- 2. WORKING T-MINUS CHECKLIST CARD (ALL 7 ITEMS VISIBLE AT ONCE) -->
+        <section class="frosted-widget rounded-2xl p-2.5 shrink-0">
+          <!-- Card Header -->
+          <div class="flex items-center justify-between mb-1">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[10px] font-semibold tracking-[0.13em] uppercase text-[#F5F3EE]/95">
+                MILESTONES (NOV 24–30)
+              </span>
+              <span id="milestoneCounterBadge" class="text-[10px] font-medium text-[#A3B18A] bg-white/10 px-1.5 py-0.5 rounded-full leading-none">
+                0/7
+              </span>
+            </div>
+
+            <!-- Inline Quick Add Trigger -->
+            <button
+              type="button"
+              onclick="toggleAddInput()"
+              class="hide-in-wallpaper w-5 h-5 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-[#DDA15E] transition"
+              title="Add custom reminder"
+              aria-label="Add custom reminder"
+            >
+              <svg id="addPlusIcon" class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Thin Progress Bar -->
+          <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden mb-1.5">
+            <div
+              id="milestoneProgressBar"
+              class="h-full bg-gradient-to-r from-[#A3B18A] to-[#DDA15E] rounded-full transition-all duration-300"
+              style="width: 0%"
+            ></div>
+          </div>
+
+          <!-- Inline Quick Add Input -->
+          <form id="inlineAddForm" onsubmit="handleAddTask(event)" class="hidden mb-1.5 flex items-center gap-1.5">
+            <input
+              id="newTaskTag"
+              type="text"
+              maxlength="6"
+              placeholder="Tag"
+              class="w-14 px-2 py-1 rounded-lg bg-black/30 border border-white/15 text-[11px] text-[#F5F3EE] placeholder-[#C8C4B8]/60 focus:outline-none focus:border-[#DDA15E]"
+            />
+            <input
+              id="newTaskText"
+              type="text"
+              placeholder="Quick reminder..."
+              class="flex-1 px-2 py-1 rounded-lg bg-black/30 border border-white/15 text-[11px] text-[#F5F3EE] placeholder-[#C8C4B8]/60 focus:outline-none focus:border-[#DDA15E]"
+              required
+            />
+            <button
+              type="submit"
+              class="px-2 py-1 rounded-lg bg-[#DDA15E] text-[#141913] text-[10px] font-semibold"
+            >
+              Add
+            </button>
+          </form>
+
+          <!-- All 7 T-Minus Milestones List -->
+          <ul id="milestoneList" class="flex flex-col gap-1">
+            <!-- Rendered via JS -->
+          </ul>
+        </section>
+
+        <!-- 3. COMPACT BENTO ROW: TODAY'S PEAK STUDY BLOCKS + STUDY FOCUS -->
+        <section class="grid grid-cols-12 gap-2 shrink-0">
+          <!-- Left (7 cols): Daily Peak Study Blocks -->
+          <div class="col-span-7 frosted-widget rounded-2xl p-2.5 flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[9.5px] font-semibold tracking-[0.12em] uppercase text-[#F5F3EE]/95">
+                PEAK BLOCKS
+              </span>
+              <span id="dailyHoursBadge" class="text-[9.5px] font-medium text-[#DDA15E]">0/7h</span>
+            </div>
+
+            <div id="studyBlocksGrid" class="flex flex-col gap-1">
+              <!-- Rendered via JS: 4-7 AM (Peak), 10-12 PM, 7-9 PM -->
+            </div>
+          </div>
+
+          <!-- Right (5 cols): Psychology Study Focus -->
+          <div class="col-span-5 frosted-widget rounded-2xl p-2.5 flex flex-col justify-between text-center">
+            <div>
+              <span class="text-[9.5px] font-semibold tracking-[0.12em] uppercase text-[#F5F3EE]/95 block">
+                STUDY FOCUS
+              </span>
+              <span class="serif-accent italic text-[10px] text-[#C8C4B8] block leading-tight mt-0.5">
+                Calm, deep recall
+              </span>
+            </div>
+
+            <!-- 3 Line-Art Icons -->
+            <div class="grid grid-cols-3 gap-1 my-1.5 items-center justify-items-center">
+              <!-- Social -->
+              <div class="flex flex-col items-center">
+                <svg class="w-4 h-4 text-[#DDA15E]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <circle cx="9" cy="8" r="3" />
+                  <circle cx="16" cy="9" r="2.3" />
+                  <path stroke-linecap="round" d="M3.5 19c0-2.7 2.4-4.8 5.5-4.8s5.5 2.1 5.5 4.8" />
+                  <path stroke-linecap="round" d="M14.5 18.5c.3-1.9 1.9-3.3 3.8-3.3 1.2 0 2.3.5 2.9 1.4" />
+                </svg>
+              </div>
+              <!-- Personal -->
+              <div class="flex flex-col items-center">
+                <svg class="w-4 h-4 text-[#A3B18A]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <!-- Forensic -->
+              <div class="flex flex-col items-center">
+                <svg class="w-4 h-4 text-[#F5F3EE]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <circle cx="11" cy="11" r="6" />
+                  <path stroke-linecap="round" d="M20 20l-4.2-4.2" />
+                  <path stroke-linecap="round" d="M9 11h4M11 9v4" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="text-[8.5px] font-semibold tracking-[0.07em] uppercase text-[#F5F3EE]/90 leading-tight">
+              SOCIAL • PERSONAL<br />FORENSIC PSYCH
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. COMPACT DEC EXAM TIMELINE STRIP (ALL 7 EXAMS VISIBLE AT A GLANCE, NO SCROLL) -->
+        <section class="frosted-widget rounded-2xl px-2.5 py-1.5 shrink-0">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[9px] font-semibold tracking-[0.14em] uppercase text-[#C8C4B8]">
+              DEC EXAM TIMELINE (BPCC / BPCE / BPCS)
+            </span>
+            <span id="examCountdownHeader" class="text-[9px] text-[#DDA15E] font-medium">Next: Dec 5</span>
+          </div>
+          <div id="examGridContainer" class="grid grid-cols-7 gap-1">
+            <!-- 7 ultra-compact exam chips rendered via JS -->
+          </div>
+        </section>
+
+        <!-- 5. SAMSUNG ONE UI BOTTOM DOCK: ULTRASONIC FINGERPRINT + NOW BAR + SHORTCUTS + GESTURE BAR -->
+        <footer class="flex flex-col items-center gap-1.5 pt-0.5 shrink-0 text-[#F5F3EE]/90">
+          <!-- Ultrasonic Fingerprint Ring positioned right above Now Bar (S26 sensor zone) -->
+          <button
+            type="button"
+            id="fingerprintBtn"
+            onclick="handleUnlockTap()"
+            class="w-9 h-9 rounded-full border border-white/30 bg-white/[0.06] hover:border-[#DDA15E]/80 active:scale-95 flex items-center justify-center text-[#F5F3EE]/90 transition"
+            title="Ultrasonic Fingerprint Unlock"
+            aria-label="Ultrasonic fingerprint sensor"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+            </svg>
+          </button>
+
+          <!-- Bottom Row: Left Phone Shortcut + Center Samsung Now Bar Pill + Right Camera Shortcut -->
+          <div class="w-full flex items-center justify-between gap-2 px-1">
+            <!-- Left Shortcut: Phone (Tap to Reset) -->
+            <button
+              type="button"
+              onclick="confirmResetModal()"
+              class="w-9 h-9 rounded-full frosted-pill flex-shrink-0 flex items-center justify-center text-[#F5F3EE] hover:bg-white/20 active:scale-95 transition shadow-md"
+              title="Phone (Tap to reset milestones)"
+              aria-label="Phone shortcut"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.25 1.01l-2.2 2.2z" />
+              </svg>
+            </button>
+
+            <!-- Center: Interactive Samsung One UI Now Bar Capsule -->
+            <button
+              type="button"
+              onclick="cycleNowBarState()"
+              class="oneui-now-bar flex-1 min-w-0 h-9 px-3 rounded-full flex items-center justify-between gap-2 text-left active:scale-[0.98] transition"
+              title="Samsung Now Bar — Tap to cycle active study status"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="w-2 h-2 rounded-full bg-[#DDA15E] animate-pulse flex-shrink-0"></span>
+                <span id="nowBarPrimary" class="text-[10.5px] font-semibold text-[#F5F3EE] truncate">
+                  BPCC 105 • Peak Prep
+                </span>
+              </div>
+              <span id="nowBarSecondary" class="text-[9.5px] font-medium text-[#A3B18A] flex-shrink-0">
+                Next: 4:00 AM
+              </span>
+            </button>
+
+            <!-- Right Shortcut: Camera (Toggles Clean Screenshot Mode) -->
+            <button
+              type="button"
+              onclick="toggleWallpaperMode(true)"
+              class="w-9 h-9 rounded-full frosted-pill flex-shrink-0 flex items-center justify-center text-[#F5F3EE] hover:bg-white/20 active:scale-95 transition shadow-md"
+              title="Camera (Clean Wallpaper Screenshot Mode)"
+              aria-label="Camera shortcut"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 3L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-3.17L15 3H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Classic Samsung One UI Bottom Navigation Gesture Handle -->
+          <div
+            onclick="handleUnlockTap()"
+            class="w-28 h-1 rounded-full bg-[#F5F3EE]/60 hover:bg-[#F5F3EE] cursor-pointer transition"
+            aria-label="One UI gesture bar"
+          ></div>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Non-Blocking Toast Message -->
+  <div
+    id="toastMessage"
+    class="fixed top-12 left-1/2 -translate-x-1/2 z-50 px-3.5 py-1.5 rounded-full frosted-widget text-[11px] font-medium text-[#F5F3EE] shadow-xl opacity-0 pointer-events-none transition-opacity duration-300"
+  >
+    Saved
+  </div>
+
+  <!-- Custom Reset Confirmation Modal -->
+  <div id="resetModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/65 backdrop-blur-sm px-4">
+    <div class="frosted-widget rounded-2xl p-4 max-w-[280px] w-full text-center">
+      <h3 class="text-xs font-semibold text-[#F5F3EE]">Reset Milestones?</h3>
+      <p class="text-[11px] text-[#C8C4B8] mt-1 leading-relaxed">
+        Restore default Nov 24–30 T-minus items and clear today's study blocks?
+      </p>
+      <div class="mt-3 flex items-center gap-2">
+        <button
+          onclick="closeResetModal()"
+          class="flex-1 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-[11px] font-medium text-[#F5F3EE] transition"
+        >
+          Cancel
+        </button>
+        <button
+          onclick="executeReset()"
+          class="flex-1 py-1.5 rounded-xl bg-[#DDA15E] text-[#141913] text-[11px] font-semibold hover:brightness-110 transition"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEYS = {
+      MILESTONES: 'ignou_psych_compact_milestones_v2',
+      STUDY_BLOCKS: 'ignou_psych_compact_blocks_v2'
+    };
+
+    const DEFAULT_MILESTONES = [
+      { id: 'm1', tag: 'T-6', date: 'Nov 24', text: 'Outline assignments; start BPCC 105', done: false },
+      { id: 'm2', tag: 'T-5', date: 'Nov 25', text: 'Finish BPCC 105, 106 assignments', done: false },
+      { id: 'm3', tag: 'T-4', date: 'Nov 26', text: 'Finish BPCC 108, 111 assignments', done: false },
+      { id: 'm4', tag: 'T-3', date: 'Nov 27', text: 'Complete BPCC 114, 141 assignments', done: false },
+      { id: 'm5', tag: 'T-2', date: 'Nov 28', text: 'Kottayam travel; light PYQ reading', done: false },
+      { id: 'm6', tag: 'T-1', date: 'Nov 29', text: 'Revise BPCC 105 core units', done: false },
+      { id: 'm7', tag: 'T-0', date: 'Nov 30', text: 'Submit assignments; finalize exam prep', done: false }
+    ];
+
+    const DEFAULT_STUDY_BLOCKS = [
+      { id: 'b1', time: '4–7 AM (Peak)', hours: 3, done: false },
+      { id: 'b2', time: '10–12 PM', hours: 2, done: false },
+      { id: 'b3', time: '7–9 PM', hours: 2, done: false }
+    ];
+
+    const EXAM_SCHEDULE = [
+      { date: 'Dec 5', dayNum: 5, code: '105', primary: true },
+      { date: 'Dec 9', dayNum: 9, code: '106', primary: false },
+      { date: 'Dec 17', dayNum: 17, code: '108', primary: false },
+      { date: 'Dec 18', dayNum: 18, code: '111', primary: false },
+      { date: 'Dec 21', dayNum: 21, code: '114', primary: false },
+      { date: 'Dec 23', dayNum: 23, code: '141', primary: false },
+      { date: 'Dec 26', dayNum: 26, code: '184', primary: false }
+    ];
+
+    const NOW_BAR_VIEWS = [
+      { primary: 'BPCC 105 • Peak Prep', secondary: 'Next: 4:00 AM' },
+      { primary: '6 Assignments Due', secondary: 'Nov 30 (T-6d)' },
+      { primary: 'Daily Target • 7–8h', secondary: '3 Study Blocks' }
+    ];
+    let nowBarIdx = 0;
+
+    let milestones = [];
+    let studyBlocks = [];
+
+    function loadState() {
+      try {
+        const savedMilestones = localStorage.getItem(STORAGE_KEYS.MILESTONES);
+        const savedBlocks = localStorage.getItem(STORAGE_KEYS.STUDY_BLOCKS);
+        milestones = savedMilestones ? JSON.parse(savedMilestones) : JSON.parse(JSON.stringify(DEFAULT_MILESTONES));
+        studyBlocks = savedBlocks ? JSON.parse(savedBlocks) : JSON.parse(JSON.stringify(DEFAULT_STUDY_BLOCKS));
+      } catch (e) {
+        milestones = JSON.parse(JSON.stringify(DEFAULT_MILESTONES));
+        studyBlocks = JSON.parse(JSON.stringify(DEFAULT_STUDY_BLOCKS));
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEYS.MILESTONES, JSON.stringify(milestones));
+        localStorage.setItem(STORAGE_KEYS.STUDY_BLOCKS, JSON.stringify(studyBlocks));
+      } catch (e) {
+        // Ignore storage quota errors in restricted sandboxes
+      }
+    }
+
+    function updateClockAndCountdowns() {
+      const now = new Date();
+      let hours = now.getHours();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      hours = hours % 12 || 12;
+
+      document.getElementById('liveClock').innerHTML =
+        `<span class="clock-hr">${hours}</span><span class="opacity-80">:</span><span class="clock-min">${minutes}</span>` +
+        `<span class="text-[11px] font-normal tracking-wide text-[#C8C4B8] align-top ml-0.5">${ampm}</span>`;
+
+      const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const dayName = days[now.getDay()];
+      const monthName = months[now.getMonth()];
+      const dateNum = now.getDate();
+
+      const year = now.getFullYear();
+      const todayMidnight = new Date(year, now.getMonth(), now.getDate());
+      const nov30 = new Date(year, 10, 30);
+      const dec5 = new Date(year, 11, 5);
+      const msDay = 86400000;
+
+      const dAssign = Math.round((nov30 - todayMidnight) / msDay);
+      const dExam = Math.round((dec5 - todayMidnight) / msDay);
+
+      const assignLabel = dAssign > 0 ? `T-${dAssign}d` : dAssign === 0 ? 'T-0d' : 'Done';
+      const examLabel = dExam > 0 ? `T-${dExam}d` : dExam === 0 ? 'T-0d' : 'Live';
+
+      document.getElementById('liveDateLine').innerHTML =
+        `${dayName}, ${monthName} ${dateNum} • <span class="text-[#DDA15E] font-medium">Assignments: ${assignLabel}</span> • <span class="text-[#A3B18A] font-medium">Exams: ${examLabel}</span>`;
+    }
+
+    function renderMilestones() {
+      const list = document.getElementById('milestoneList');
+      list.innerHTML = '';
+
+      let completedCount = 0;
+      milestones.forEach((item) => {
+        if (item.done) completedCount++;
+
+        const li = document.createElement('li');
+        li.className = `flex items-center justify-between gap-1.5 px-2 py-1 rounded-xl border transition cursor-pointer ${
+          item.done
+            ? 'bg-white/[0.03] border-white/[0.06] opacity-60'
+            : 'bg-white/[0.06] hover:bg-white/[0.1] border-white/[0.09]'
+        }`;
+        li.onclick = () => toggleMilestone(item.id);
+
+        const isCustom = !DEFAULT_MILESTONES.some((d) => d.id === item.id);
+
+        li.innerHTML = `
+          <div class="flex items-center gap-2 min-w-0 flex-1">
+            <span class="w-3.5 h-3.5 rounded-md flex items-center justify-center flex-shrink-0 border transition ${
+              item.done
+                ? 'bg-[#A3B18A] border-[#A3B18A] text-[#141913]'
+                : 'border-white/35 bg-black/20'
+            }">
+              ${
+                item.done
+                  ? '<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>'
+                  : ''
+              }
+            </span>
+            <span class="px-1.5 py-[1px] rounded text-[9px] font-semibold tracking-tight flex-shrink-0 ${
+              item.tag === 'T-0'
+                ? 'bg-[#DDA15E]/25 text-[#DDA15E]'
+                : 'bg-white/10 text-[#C8C4B8]'
+            }">
+              ${escapeHtml(item.tag)}
+            </span>
+            <span class="milestone-row-text truncate ${
+              item.done ? 'line-through text-[#C8C4B8]' : 'text-[#F5F3EE]'
+            }">
+              ${item.date ? `<span class="text-[#C8C4B8] font-medium">${escapeHtml(item.date)}:</span> ` : ''}${escapeHtml(item.text)}
+            </span>
+          </div>
+          ${
+            isCustom
+              ? `<button type="button" onclick="deleteMilestone(event, '${item.id}')" class="hide-in-wallpaper text-[#C8C4B8]/70 hover:text-red-300 px-1 text-xs leading-none" title="Remove">×</button>`
+              : ''
+          }
+        `;
+        list.appendChild(li);
+      });
+
+      const total = milestones.length;
+      const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+      document.getElementById('milestoneCounterBadge').textContent = `${completedCount}/${total}`;
+      document.getElementById('milestoneProgressBar').style.width = `${pct}%`;
+    }
+
+    function toggleMilestone(id) {
+      const target = milestones.find((m) => m.id === id);
+      if (!target) return;
+      target.done = !target.done;
+      saveState();
+      renderMilestones();
+    }
+
+    function deleteMilestone(event, id) {
+      event.stopPropagation();
+      milestones = milestones.filter((m) => m.id !== id);
+      saveState();
+      renderMilestones();
+      showToast('Reminder removed');
+    }
+
+    function toggleAddInput() {
+      const form = document.getElementById('inlineAddForm');
+      const icon = document.getElementById('addPlusIcon');
+      const isHidden = form.classList.contains('hidden');
+      form.classList.toggle('hidden', !isHidden);
+      icon.style.transform = isHidden ? 'rotate(45deg)' : 'rotate(0deg)';
+      if (isHidden) {
+        document.getElementById('newTaskText').focus();
+      }
+    }
+
+    function handleAddTask(event) {
+      event.preventDefault();
+      const tagInput = document.getElementById('newTaskTag');
+      const textInput = document.getElementById('newTaskText');
+      const text = textInput.value.trim();
+      if (!text) return;
+
+      const tag = tagInput.value.trim() || 'NOTE';
+      milestones.push({
+        id: 'custom_' + Date.now(),
+        tag: tag.toUpperCase(),
+        date: '',
+        text,
+        done: false
+      });
+
+      tagInput.value = '';
+      textInput.value = '';
+      toggleAddInput();
+      saveState();
+      renderMilestones();
+      showToast('Reminder added');
+    }
+
+    function renderStudyBlocks() {
+      const container = document.getElementById('studyBlocksGrid');
+      container.innerHTML = '';
+
+      let completedHours = 0;
+      let totalHours = 0;
+
+      studyBlocks.forEach((block) => {
+        totalHours += block.hours;
+        if (block.done) completedHours += block.hours;
+
+        const row = document.createElement('button');
+        row.type = 'button';
+        row.onclick = () => toggleStudyBlock(block.id);
+        row.className = `w-full flex items-center justify-between px-2 py-1 rounded-xl border text-left transition ${
+          block.done
+            ? 'bg-[#A3B18A]/20 border-[#A3B18A]/40 text-[#F5F3EE]'
+            : 'bg-white/[0.05] hover:bg-white/[0.1] border-white/[0.08] text-[#F5F3EE]/90'
+        }`;
+
+        row.innerHTML = `
+          <span class="flex items-center gap-1.5 min-w-0">
+            <span class="w-3 h-3 rounded flex items-center justify-center flex-shrink-0 border ${
+              block.done ? 'bg-[#A3B18A] border-[#A3B18A] text-[#141913]' : 'border-white/35'
+            }">
+              ${
+                block.done
+                  ? '<svg class="w-2 h-2" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>'
+                  : ''
+              }
+            </span>
+            <span class="text-[10px] font-medium truncate ${block.done ? 'line-through opacity-75' : ''}">
+              ${escapeHtml(block.time)}
+            </span>
+          </span>
+          <span class="text-[9px] font-semibold text-[#C8C4B8] flex-shrink-0 ml-1">${block.hours}h</span>
+        `;
+        container.appendChild(row);
+      });
+
+      document.getElementById('dailyHoursBadge').textContent = `${completedHours}/${totalHours}h`;
+    }
+
+    function toggleStudyBlock(id) {
+      const block = studyBlocks.find((b) => b.id === id);
+      if (!block) return;
+      block.done = !block.done;
+      saveState();
+      renderStudyBlocks();
+    }
+
+    function renderExamGrid() {
+      const grid = document.getElementById('examGridContainer');
+      grid.innerHTML = '';
+
+      const now = new Date();
+      const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const msDay = 86400000;
+
+      EXAM_SCHEDULE.forEach((ex) => {
+        const exDate = new Date(now.getFullYear(), 11, ex.dayNum);
+        const diffDays = Math.round((exDate - todayMidnight) / msDay);
+        const badgeText = diffDays > 0 ? `-${diffDays}d` : diffDays === 0 ? 'TODAY' : 'DONE';
+
+        const chip = document.createElement('div');
+        chip.className = `rounded-xl py-1 px-0.5 text-center border ${
+          ex.primary
+            ? 'bg-[#DDA15E]/22 border-[#DDA15E]/50'
+            : 'bg-white/[0.045] border-white/[0.08]'
+        }`;
+        chip.innerHTML = `
+          <div class="text-[8px] leading-tight text-[#C8C4B8]">${ex.date}</div>
+          <div class="text-[10px] font-semibold leading-tight mt-0.5 ${
+            ex.primary ? 'text-[#DDA15E]' : 'text-[#F5F3EE]'
+          }">${ex.code}</div>
+          <div class="text-[7.5px] leading-none mt-0.5 ${
+            ex.primary ? 'text-[#DDA15E]/90 font-medium' : 'text-[#A3B18A]/85'
+          }">${badgeText}</div>
+        `;
+        grid.appendChild(chip);
+      });
+    }
+
+    function cycleNowBarState() {
+      nowBarIdx = (nowBarIdx + 1) % NOW_BAR_VIEWS.length;
+      const item = NOW_BAR_VIEWS[nowBarIdx];
+      document.getElementById('nowBarPrimary').textContent = item.primary;
+      document.getElementById('nowBarSecondary').textContent = item.secondary;
+    }
+
+    function toggleWallpaperMode(enable) {
+      document.body.classList.toggle('wallpaper-mode', enable);
+      if (enable) {
+        showToast('Clean View active — take screenshot');
+      }
+    }
+
+    function handleUnlockTap() {
+      const fpBtn = document.getElementById('fingerprintBtn');
+      if (fpBtn) {
+        fpBtn.classList.remove('fingerprint-ripple');
+        void fpBtn.offsetWidth;
+        fpBtn.classList.add('fingerprint-ripple');
+      }
+      const done = milestones.filter((m) => m.done).length;
+      showToast(`One UI Unlocked • ${done}/${milestones.length} milestones complete`);
+    }
+
+    let touchStartY = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      const touchEndY = e.changedTouches[0].screenY;
+      if (touchStartY - touchEndY > 75) {
+        handleUnlockTap();
+      }
+    }, { passive: true });
+
+    function confirmResetModal() {
+      const m = document.getElementById('resetModal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+
+    function closeResetModal() {
+      const m = document.getElementById('resetModal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    function executeReset() {
+      milestones = JSON.parse(JSON.stringify(DEFAULT_MILESTONES));
+      studyBlocks = JSON.parse(JSON.stringify(DEFAULT_STUDY_BLOCKS));
+      saveState();
+      renderMilestones();
+      renderStudyBlocks();
+      closeResetModal();
+      showToast('Milestones reset');
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const el = document.getElementById('toastMessage');
+      el.textContent = msg;
+      el.classList.remove('opacity-0');
+      el.classList.add('opacity-100');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.remove('opacity-100');
+        el.classList.add('opacity-0');
+      }, 2000);
+    }
+
+    function escapeHtml(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadState();
+      renderMilestones();
+      renderStudyBlocks();
+      renderExamGrid();
+      updateClockAndCountdowns();
+      setInterval(updateClockAndCountdowns, 10000);
+    });
+  </script>
+</body>
+</html>
